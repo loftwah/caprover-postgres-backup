@@ -8,10 +8,10 @@ WORKDIR $WORKDIR
 
 # install crontab-ui
 #
-ENV CRON_DIR /etc/crontabs
-RUN mkdir -p $CRON_DIR
-RUN touch $CRON_DIR/root
-RUN chmod +x $CRON_DIR/root
+ENV CRON_PATH /etc/crontabs
+RUN mkdir -p $CRON_PATH
+RUN touch $CRON_PATH/root
+RUN chmod +x $CRON_PATH/root
 
 RUN apt-get update && apt-get install -y \
     git wget curl nodejs npm supervisor
