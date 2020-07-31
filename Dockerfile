@@ -11,8 +11,7 @@ RUN apk --no-cache add \
 
 # install firebase cli tools
 #
-RUN wget -O firebase  https://firebase.tools/bin/linux/latest
-RUN chmod +x firebase
-RUN mv firebase /usr/local/bin/firebase
+RUN wget -qO /usr/local/bin/firebase  https://firebase.tools/bin/linux/latest
+RUN chmod +x /usr/local/bin/firebase
 
 CMD ["supervisord", "-c", "/etc/supervisord.conf"]
