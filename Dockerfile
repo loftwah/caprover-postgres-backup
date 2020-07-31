@@ -1,4 +1,4 @@
-FROM alseambusher/crontab-ui
+FROM alpine
 
 # setup the working directory
 #
@@ -7,11 +7,13 @@ RUN mkdir -p $WORKDIR
 WORKDIR $WORKDIR
 
 RUN apk --no-cache add \
-    postgresql
+    postgresql curl python3
 
-# install firebase cli tools
+# install gcloud sdk
 #
-RUN wget -qO /usr/local/bin/firebase  https://firebase.tools/bin/linux/latest
-RUN chmod +x /usr/local/bin/firebase
+RUN curl -s https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz \
+    | tar xz && ./google-cloud-sdk/install.sh -q --usage-reporting=false
+ENV PATH=$PATH:google-cloud-sdk/bin/
 
-CMD ["supervisord", "-c", "/etc/supervisord.conf"]
+COPY . .
+CMD sh run.sh

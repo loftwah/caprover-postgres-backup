@@ -2,7 +2,7 @@
 
 1. Server with [caprover](https://caprover.com/) installed and ready to go
 2. Postgres database on that server (one-click apps rock!)
-3. Firebase account
+3. Firebase account & a firestore instance
 
 ## Usage
 
