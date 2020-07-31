@@ -22,4 +22,3 @@ RUN cd crontab-ui && npm install
 
 ENV CRON_IN_DOCKER true
 CMD ["supervisord", "-c", "/etc/supervisord.conf"]
-niut
