@@ -6,11 +6,14 @@
 
 ## Usage
 
-1. 
+1. Clone this repository
 ```
 git clone https://github.com/dara-network/caprover-postgres-backup.git 
 ```
 2. Create a caprover app (✅ Has Persistent Data)
-3. Specify the environment variables from [`.env.example`](.env.example) in your caprover app
-4. `caprover deploy`
-5. IMPORTANT: Enable basic HTTP auth for your caprover app
+3. Enable basic auth for the caprover app 
+4. Specify environment variables in the caprover app, using [`.env.example`](.env.example) as a template
+5. Deploy!
+```
+caprover deploy
+```
