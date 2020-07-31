@@ -6,7 +6,7 @@ ENV WORKDIR /app
 RUN mkdir -p $WORKDIR
 WORKDIR $WORKDIR
 
-RUN apt update && apt-get instal -y \
+RUN apk --no-cache add \
     postgresql
 
 # install firebase cli tools
