@@ -14,7 +14,7 @@ git clone https://github.com/dara-network/caprover-postgres-backup.git
 3. Force HTTPS, Enable basic auth in the caprover app - Allowing prying eyes to use this app is dangerous! 
 4. Specify environment variables in the caprover app, using [`.env.example`](.env.example) as a template
 5. Add a persistent directory in caprover. Path in App: `/volumes/crontab-ui` (same as `CRON_DB_PATH` environment variable)
-6. Deploy!
+6. Deploy! (using [caprover CLI](https://caprover.com/docs/get-started.html#step-3-install-caprover-cli))
 ```
 caprover deploy
 ```

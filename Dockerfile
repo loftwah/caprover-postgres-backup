@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     git wget curl nodejs npm supervisor
 
 RUN git clone https://github.com/alseambusher/crontab-ui.git
+RUN ls
 COPY crontab-ui/supervisord.conf /etc/supervisord.conf
 COPY crontab-ui .
 RUN cd crontab-ui && npm install
