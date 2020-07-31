@@ -4,8 +4,8 @@ ENV WORKDIR /app
 RUN mkdir -p $WORKDIR
 WORKDIR $WORKDIR
 
-ENV CRON_PATH /etc/crontabs
-RUN touch $CRON_PATH/root && chmod +x $CRON_PATH/root
+ENV CRON_DIR /etc/crontabs
+RUN mkdir CRON_DIR && touch $CRON_DIR/root && chmod +x $CRON_DIR/root
 
 RUN apt-get install -y \
       wget \
