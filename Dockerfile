@@ -11,7 +11,7 @@ WORKDIR $WORKDIR
 ENV CRON_DIR /etc/crontabs
 RUN mkdir -p $CRON_DIR && touch $CRON_DIR/root && chmod +x $CRON_DIR/root
 
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
       wget \
       curl \
       nodejs \
