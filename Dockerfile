@@ -14,7 +14,7 @@ RUN touch $CRON_PATH/root
 RUN chmod +x $CRON_PATH/root
 
 RUN apt-get update && apt-get install -y \
-    git wget curl nodejs npm supervisor
+    git wget curl nodejs npm supervisor cron
 
 RUN git clone https://github.com/alseambusher/crontab-ui.git
 RUN cp crontab-ui/supervisord.conf /etc/supervisord.conf
